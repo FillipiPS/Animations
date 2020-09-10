@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5BD71919250AD3D100A1C9AE /* WaveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD71918250AD3D100A1C9AE /* WaveView.swift */; };
 		5BED8BF22509937C006D7489 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BED8BF12509937C006D7489 /* AppDelegate.swift */; };
 		5BED8BF42509937C006D7489 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BED8BF32509937C006D7489 /* SceneDelegate.swift */; };
 		5BED8BF62509937C006D7489 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BED8BF52509937C006D7489 /* ContentView.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5BD71918250AD3D100A1C9AE /* WaveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaveView.swift; sourceTree = "<group>"; };
 		5BED8BEE2509937C006D7489 /* Animations.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Animations.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BED8BF12509937C006D7489 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5BED8BF32509937C006D7489 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -37,6 +39,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5BD71915250ACE0100A1C9AE /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				5BD71918250AD3D100A1C9AE /* WaveView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		5BED8BE52509937C006D7489 = {
 			isa = PBXGroup;
 			children = (
@@ -59,6 +69,7 @@
 				5BED8BF12509937C006D7489 /* AppDelegate.swift */,
 				5BED8BF32509937C006D7489 /* SceneDelegate.swift */,
 				5BED8BF52509937C006D7489 /* ContentView.swift */,
+				5BD71915250ACE0100A1C9AE /* Views */,
 				5BED8BF72509937D006D7489 /* Assets.xcassets */,
 				5BED8BFC2509937D006D7489 /* LaunchScreen.storyboard */,
 				5BED8BFF2509937D006D7489 /* Info.plist */,
@@ -149,6 +160,7 @@
 				5BED8BF22509937C006D7489 /* AppDelegate.swift in Sources */,
 				5BED8BF42509937C006D7489 /* SceneDelegate.swift in Sources */,
 				5BED8BF62509937C006D7489 /* ContentView.swift in Sources */,
+				5BD71919250AD3D100A1C9AE /* WaveView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
