@@ -35,7 +35,7 @@ struct ContentView: View {
                         self.animationAmount += 360
                         self.counter += 1
                         if self.counter % 2 == 0 { // In rotation3DEffect gets double axis, it is not a bug, it`s a feature
-                            self.axis = self.changeAxis(for: self.axis)
+                            self.changeAxis()
                         }
                     }
                 }
@@ -46,14 +46,14 @@ struct ContentView: View {
     }
     
     // Change the states of axis (0,0,1) -> (1,0,0) -> (0,1,0) -> (0,0,1)
-    func changeAxis(for axis: (CGFloat, CGFloat, CGFloat)) -> (CGFloat, CGFloat, CGFloat) {
+    func changeAxis() {
         switch axis {
         case (0,0,1):
-            return (1,0,0)
+            axis = (1,0,0)
         case (1,0,0):
-            return (0,1,0)
+            axis = (0,1,0)
         default:
-            return (0,0,1)
+            axis = (0,0,1)
         }
     }
 }
