@@ -21,11 +21,8 @@ struct Rotation3DView: View {
             Spacer()
             Circle()
                 .overlay(
-                    Image(systemName: "ant")
-                        .resizable()
-                        .foregroundColor(.white)
-                        .frame(width: 50, height: 50)
-                        .aspectRatio(contentMode: .fit)
+                    LinearGradient(gradient: Gradient(colors: [.blue, .green]), startPoint: .topLeading, endPoint: .bottomTrailing)
+                        .mask(SymbolView(symbol: "ant"))
                 )
                 .frame(width: 100.0, height: 100.0)
                 .onReceive(timer) { time in
@@ -46,11 +43,11 @@ struct Rotation3DView: View {
     // Change the states of axis (0,0,1) -> (1,0,0) -> (0,1,0) -> (0,0,1)
     func changeAxis() {
         switch axis {
-        case (0,0,1):
+        case (0,0,1): // Z to X
             axis = (1,0,0)
-        case (1,0,0):
+        case (1,0,0): // X to Y
             axis = (0,1,0)
-        default:
+        default: // Y to Z
             axis = (0,0,1)
         }
     }
