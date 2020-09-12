@@ -11,9 +11,17 @@ import SwiftUI
 struct ContentView: View {
     
     var body: some View {
-        VStack {
+        TabView {
             WaveView()
+                .tabItem {
+                    Image(systemName: "dot.radiowaves.left.and.right")
+                    Text("Wave")
+                }
             Rotation3DView()
+                .tabItem {
+                    Image(systemName: "goforward")
+                    Text("Rotation 3D")
+                }
         }
     }
 }
