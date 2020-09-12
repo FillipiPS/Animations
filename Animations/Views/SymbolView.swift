@@ -13,14 +13,13 @@ struct SymbolView: View {
     
     var body: some View {
         Image(systemName: symbol ?? "ant")
-            .resizable()
-            .frame(width: 50, height: 70)
-            .aspectRatio(contentMode: .fit)
+            .font(.system(size: 50, weight: .medium))
+            .frame(width: 50, height: 50)
     }
 }
 
 struct AntView_Previews: PreviewProvider {
     static var previews: some View {
-        SymbolView(symbol: "tortoise")
+        SymbolView(symbol: "capslock")
     }
 }
