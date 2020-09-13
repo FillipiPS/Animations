@@ -25,8 +25,11 @@ struct WaveView: View {
                         .opacity(Double(2 - animationAmount))
                         .animation(Animation.easeOut(duration: 2).repeatForever(autoreverses: false))
                 )
-                .onAppear {
+                .onAppear() {
                     self.animationAmount = 2
+                }
+                .onDisappear() {
+                    self.animationAmount = 0
                 }
             Spacer()
         }
