@@ -10,9 +10,9 @@ import SwiftUI
 
 struct Rotation3DView: View {
     @State private var animationAmount = 0.0
-    @State private var axis = (CGFloat(0), CGFloat(0), CGFloat(1))
+    @State private var axis = (CGFloat(0), CGFloat(0), CGFloat(0))
     @State private var counter = 0
-    let timer = Timer.publish(every: 5, on: .main, in: .common).autoconnect()
+    @State private var timer = Timer.publish(every: 5, on: .main, in: .common).autoconnect()
     
     var body: some View {
         VStack {
@@ -37,7 +37,15 @@ struct Rotation3DView: View {
             .rotation3DEffect(.degrees(animationAmount), axis: (x: axis.0, y: axis.1, z: axis.2))
             Spacer()
         }
-        .onDisappear() { self.timer.upstream.connect().cancel() }
+        .onAppear() {
+            self.timer = Timer.publish(every: 5, on: .main, in: .common).autoconnect()
+            self.counter = 0
+            self.animationAmount = 0.0
+            self.axis = (CGFloat(0), CGFloat(0), CGFloat(1))
+        }
+        .onDisappear() {
+            self.timer.upstream.connect().cancel()
+        }
     }
     
     // Change the states of axis (0,0,1) -> (1,0,0) -> (0,1,0) -> (0,0,1)
