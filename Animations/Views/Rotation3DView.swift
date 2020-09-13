@@ -63,6 +63,11 @@ struct Rotation3DView: View {
 
 struct Rotation3DView_Previews: PreviewProvider {
     static var previews: some View {
-        Rotation3DView()
+        Group {
+            Rotation3DView()
+                .environment(\.colorScheme, .light)
+            Rotation3DView()
+                .environment(\.colorScheme, .dark)
+        }
     }
 }

@@ -38,6 +38,11 @@ struct WaveView: View {
 
 struct WaveView_Previews: PreviewProvider {
     static var previews: some View {
-        WaveView()
+        Group {
+            WaveView()
+                .environment(\.colorScheme, .light)
+            WaveView()
+                .environment(\.colorScheme, .dark)
+        }
     }
 }
