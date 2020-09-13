@@ -20,7 +20,7 @@ struct WaveView: View {
                 .frame(width: 100.0, height: 100.0)
                 .overlay(
                     Circle()
-                        .stroke(Color.black)
+                        .stroke(Color("ItemColor"))
                         .scaleEffect(animationAmount)
                         .opacity(Double(2 - animationAmount))
                         .animation(Animation.easeOut(duration: 2).repeatForever(autoreverses: false))
@@ -33,6 +33,7 @@ struct WaveView: View {
                 }
             Spacer()
         }
+        .background(Color("BackgroundColor"))
     }
 }
 
