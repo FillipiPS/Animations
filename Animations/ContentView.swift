@@ -23,6 +23,7 @@ struct ContentView: View {
                     Text("Rotation 3D")
                 }
         }
+        .background(Color("BackgroundColor"))
     }
 }
 

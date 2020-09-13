@@ -33,7 +33,6 @@ struct WaveView: View {
                 }
             Spacer()
         }
-        .background(Color("BackgroundColor"))
     }
 }
 
