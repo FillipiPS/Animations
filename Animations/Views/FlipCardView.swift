@@ -11,24 +11,31 @@ import SwiftUI
 struct FlipCardView: View {
     @State private var flipped = false
     @State private var animate3d = false
+    @State private var colored = true
     
     var body: some View {
-        ZStack {
-            SymbolView(symbol: "ant")
-                .foregroundColor(.white)
-                .opacity(flipped ? 0.0 : 1.0)
-            SymbolView(symbol: "tortoise")
-                .foregroundColor(.white)
-                .opacity(flipped ? 1.0 : 0.0)
-        }
-        .frame(width: 350, height: 250)
-        .background(LinearGradient(gradient: Gradient(colors: [.blue, .green]), startPoint: .topLeading, endPoint: .bottomTrailing))
-        .cornerRadius(30)
-        .modifier(FlipEffect(flipped: $flipped, axis: (x: 0, y: 1), angle: animate3d ? 180 : 0))
-        .onTapGesture {
-            withAnimation(Animation.linear(duration: 0.6)) {
-                self.animate3d.toggle()
+        VStack {
+            ZStack {
+                SymbolView(symbol: "ant")
+                    .foregroundColor(.white)
+                    .opacity(flipped ? 0.0 : 1.0)
+                
+                SymbolView(symbol: "tortoise")
+                    .foregroundColor(.white)
+                    .opacity(flipped ? 1.0 : 0.0)
             }
+            .frame(width: 350, height: 250)
+            .background(colored ? LinearGradient(gradient: Gradient(colors: [.blue, .green]), startPoint: .topLeading, endPoint: .bottomTrailing) : LinearGradient(gradient: Gradient(colors: [.black, .black]), startPoint: .topLeading, endPoint: .bottomTrailing))
+            .cornerRadius(30)
+            .modifier(FlipEffect(flipped: $flipped, axis: (x: 0, y: 1), angle: animate3d ? 180 : 0))
+            .onTapGesture {
+                withAnimation(Animation.linear(duration: 0.6)) {
+                    self.animate3d.toggle()
+                }
+            }
+            Toggle(isOn: $colored) {
+                Text("Color")
+            }.padding()
         }
     }
 }
