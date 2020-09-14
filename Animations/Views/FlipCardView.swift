@@ -16,13 +16,23 @@ struct FlipCardView: View {
     var body: some View {
         VStack {
             ZStack {
-                SymbolView(symbol: "ant")
-                    .foregroundColor(.white)
+                if colored {
+                    SymbolView(symbol: "ant")
+                        .foregroundColor(.white)
+                        .opacity(flipped ? 0.0 : 1.0)
+                    
+                    SymbolView(symbol: "tortoise")
+                        .foregroundColor(.white)
+                        .opacity(flipped ? 1.0 : 0.0)
+                } else {
+                    LinearGradient(gradient: Gradient(colors: [.blue, .green]), startPoint: .topLeading, endPoint: .bottomTrailing)
+                    .mask(SymbolView(symbol: "ant"))
                     .opacity(flipped ? 0.0 : 1.0)
-                
-                SymbolView(symbol: "tortoise")
-                    .foregroundColor(.white)
+                    
+                    LinearGradient(gradient: Gradient(colors: [.blue, .green]), startPoint: .topLeading, endPoint: .bottomTrailing)
+                    .mask(SymbolView(symbol: "tortoise"))
                     .opacity(flipped ? 1.0 : 0.0)
+                }
             }
             .frame(width: 350, height: 250)
             .background(colored ? LinearGradient(gradient: Gradient(colors: [.blue, .green]), startPoint: .topLeading, endPoint: .bottomTrailing) : LinearGradient(gradient: Gradient(colors: [.black, .black]), startPoint: .topLeading, endPoint: .bottomTrailing))
@@ -33,6 +43,7 @@ struct FlipCardView: View {
                     self.animate3d.toggle()
                 }
             }
+            
             Toggle(isOn: $colored) {
                 Text("Color")
             }.padding()
