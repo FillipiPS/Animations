@@ -15,6 +15,9 @@ struct FlipCardView: View {
     
     var body: some View {
         VStack {
+            Text("Flip Card")
+                .font(.largeTitle)
+            Spacer()
             ZStack {
                 if colorScheme != .dark {
                     SymbolView(symbol: "ant")
@@ -43,6 +46,7 @@ struct FlipCardView: View {
                     self.animate3d.toggle()
                 }
             }
+            Spacer()
         }.background(Color("BackgroundColor"))
     }
 }
