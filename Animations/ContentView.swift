@@ -22,6 +22,11 @@ struct ContentView: View {
                     Image(systemName: "goforward")
                     Text("Rotation 3D")
                 }
+            FlipCardView()
+                .tabItem {
+                    Image(systemName: "creditcard")
+                    Text("Flip Card")
+            }
         }
         .background(Color("BackgroundColor"))
     }
