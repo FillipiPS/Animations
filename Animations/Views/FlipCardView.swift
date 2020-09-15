@@ -11,12 +11,12 @@ import SwiftUI
 struct FlipCardView: View {
     @State private var flipped = false
     @State private var animate3d = false
-    @State private var colored = true
+    @Environment(\.colorScheme) var colorScheme
     
     var body: some View {
         VStack {
             ZStack {
-                if colored {
+                if colorScheme != .dark {
                     SymbolView(symbol: "ant")
                         .foregroundColor(.white)
                         .opacity(flipped ? 0.0 : 1.0)
@@ -35,7 +35,7 @@ struct FlipCardView: View {
                 }
             }
             .frame(width: 350, height: 250)
-            .background(colored ? LinearGradient(gradient: Gradient(colors: [.blue, .green]), startPoint: .topLeading, endPoint: .bottomTrailing) : LinearGradient(gradient: Gradient(colors: [.black, .black]), startPoint: .topLeading, endPoint: .bottomTrailing))
+            .background((colorScheme != .dark) ? LinearGradient(gradient: Gradient(colors: [.blue, .green]), startPoint: .topLeading, endPoint: .bottomTrailing) : LinearGradient(gradient: Gradient(colors: [.gray, .black]), startPoint: .topLeading, endPoint: .bottomTrailing))
             .cornerRadius(30)
             .modifier(FlipEffect(flipped: $flipped, axis: (x: 0, y: 1), angle: animate3d ? 180 : 0))
             .onTapGesture {
@@ -43,11 +43,7 @@ struct FlipCardView: View {
                     self.animate3d.toggle()
                 }
             }
-            
-            Toggle(isOn: $colored) {
-                Text("Color")
-            }.padding()
-        }
+        }.background(Color("BackgroundColor"))
     }
 }
 
