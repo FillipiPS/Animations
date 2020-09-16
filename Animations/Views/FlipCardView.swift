@@ -38,7 +38,7 @@ struct FlipCardView: View {
                 }
             }
             .frame(width: 350, height: 250)
-            .background((colorScheme != .dark) ? LinearGradient(gradient: Gradient(colors: [.blue, .green]), startPoint: .topLeading, endPoint: .bottomTrailing) : LinearGradient(gradient: Gradient(colors: [.gray, .black]), startPoint: .topLeading, endPoint: .bottomTrailing))
+            .background((colorScheme != .dark) ? LinearGradient(gradient: Gradient(colors: [.blue, .green]), startPoint: .topLeading, endPoint: .bottomTrailing) : LinearGradient(gradient: Gradient(colors: [.gray, .white, .black]), startPoint: .topLeading, endPoint: .bottomTrailing))
             .cornerRadius(30)
             .modifier(FlipEffect(flipped: $flipped, axis: (x: 0, y: 1), angle: animate3d ? 180 : 0))
             .onTapGesture {
