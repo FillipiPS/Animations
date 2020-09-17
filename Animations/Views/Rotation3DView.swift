@@ -23,7 +23,7 @@ struct Rotation3DView: View {
                 .foregroundColor(Color("ItemColor"))
                 .overlay(
                     LinearGradient(gradient: Gradient(colors: [.blue, .green]), startPoint: .topLeading, endPoint: .bottomTrailing)
-                        .mask(SymbolView(symbol: "ant"))
+                        .mask(SymbolView(symbol: K.Symbol.ant))
                 )
                 .frame(width: 100.0, height: 100.0)
                 .onReceive(timer) { time in
