@@ -14,17 +14,17 @@ struct ContentView: View {
         TabView {
             WaveView()
                 .tabItem {
-                    Image(systemName: "dot.radiowaves.left.and.right")
+                    Image(systemName: K.Symbol.waves)
                     Text("Wave")
                 }
             Rotation3DView()
                 .tabItem {
-                    Image(systemName: "goforward")
+                    Image(systemName: K.Symbol.rotation)
                     Text("Rotation 3D")
                 }
             FlipCardView()
                 .tabItem {
-                    Image(systemName: "creditcard")
+                    Image(systemName: K.Symbol.card)
                     Text("Flip Card")
             }
         }
