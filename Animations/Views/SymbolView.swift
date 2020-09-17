@@ -12,7 +12,7 @@ struct SymbolView: View {
     var symbol: String?
     
     var body: some View {
-        Image(systemName: symbol ?? "ant")
+        Image(systemName: symbol ?? K.Symbol.ant)
             .font(.system(size: 50, weight: .medium))
             .frame(width: 50, height: 50)
     }
