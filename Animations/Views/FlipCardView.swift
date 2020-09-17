@@ -20,20 +20,20 @@ struct FlipCardView: View {
             Spacer()
             ZStack {
                 if colorScheme != .dark {
-                    SymbolView(symbol: "ant")
+                    SymbolView(symbol: K.Symbol.ant)
                         .foregroundColor(.white)
                         .opacity(flipped ? 0.0 : 1.0)
                     
-                    SymbolView(symbol: "tortoise")
+                    SymbolView(symbol: K.Symbol.tortoise)
                         .foregroundColor(.white)
                         .opacity(flipped ? 1.0 : 0.0)
                 } else {
                     LinearGradient(gradient: Gradient(colors: [.blue, .green]), startPoint: .topLeading, endPoint: .bottomTrailing)
-                    .mask(SymbolView(symbol: "ant"))
+                        .mask(SymbolView(symbol: K.Symbol.ant))
                     .opacity(flipped ? 0.0 : 1.0)
                     
                     LinearGradient(gradient: Gradient(colors: [.blue, .green]), startPoint: .topLeading, endPoint: .bottomTrailing)
-                    .mask(SymbolView(symbol: "tortoise"))
+                        .mask(SymbolView(symbol: K.Symbol.tortoise))
                     .opacity(flipped ? 1.0 : 0.0)
                 }
             }
