@@ -11,5 +11,5 @@ import Foundation
 struct K {
     static let waveViewTitle = "Wave Animation"
     static let rotation3DViewTitle = "Rotation 3D Animation"
-    static let FlipCardViewTitle = "Flip Card"
+    static let flipCardViewTitle = "Flip Card"
 }

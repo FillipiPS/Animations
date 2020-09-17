@@ -15,7 +15,7 @@ struct FlipCardView: View {
     
     var body: some View {
         VStack {
-            Text(K.FlipCardViewTitle)
+            Text(K.flipCardViewTitle)
                 .font(.largeTitle)
             Spacer()
             ZStack {
