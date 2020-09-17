@@ -13,7 +13,7 @@ struct WaveView: View {
     
     var body: some View {
         VStack {
-            Text("Wave Animation")
+            Text(K.waveViewTitle)
                 .font(.largeTitle)
             Spacer()
             Circle()

@@ -16,7 +16,7 @@ struct Rotation3DView: View {
     
     var body: some View {
         VStack {
-            Text("Rotation 3D Animation")
+            Text(K.rotation3DViewTitle)
                 .font(.largeTitle)
             Spacer()
             Circle()
