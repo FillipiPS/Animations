@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import SwiftUI
 
 struct K {
     static let waveViewTitle = "Wave Animation"
@@ -24,6 +25,10 @@ struct K {
     struct Color {
         static let item = "ItemColor"
         static let background = "BackgroundColor"
+        struct LinearGrad {
+            static let blueGreen = LinearGradient(gradient: Gradient(colors: [.blue, .green]), startPoint: .topLeading, endPoint: .bottomTrailing)
+            static let metallicPlatinum = LinearGradient(gradient: Gradient(colors: [.gray, .white, .black]), startPoint: .topLeading, endPoint: .bottomTrailing)
+        }
     }
     
 }
