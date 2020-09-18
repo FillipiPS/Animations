@@ -20,7 +20,7 @@ struct Rotation3DView: View {
                 .font(.largeTitle)
             Spacer()
             Circle()
-                .foregroundColor(Color("ItemColor"))
+                .foregroundColor(Color(K.Color.item))
                 .overlay(
                     LinearGradient(gradient: Gradient(colors: [.blue, .green]), startPoint: .topLeading, endPoint: .bottomTrailing)
                         .mask(SymbolView(symbol: K.Symbol.ant))

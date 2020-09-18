@@ -47,7 +47,7 @@ struct FlipCardView: View {
                 }
             }
             Spacer()
-        }.background(Color("BackgroundColor"))
+        }.background(Color(K.Color.background))
     }
 }
 
