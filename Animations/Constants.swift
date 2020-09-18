@@ -21,4 +21,9 @@ struct K {
         static let tortoise = "tortoise"
     }
     
+    struct Color {
+        static let item = "ItemColor"
+        static let background = "BackgroundColor"
+    }
+    
 }
