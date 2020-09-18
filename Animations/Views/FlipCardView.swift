@@ -28,17 +28,17 @@ struct FlipCardView: View {
                         .foregroundColor(.white)
                         .opacity(flipped ? 1.0 : 0.0)
                 } else {
-                    LinearGradient(gradient: Gradient(colors: [.blue, .green]), startPoint: .topLeading, endPoint: .bottomTrailing)
+                    K.Color.LinearGrad.blueGreen
                         .mask(SymbolView(symbol: K.Symbol.ant))
-                    .opacity(flipped ? 0.0 : 1.0)
+                        .opacity(flipped ? 0.0 : 1.0)
                     
-                    LinearGradient(gradient: Gradient(colors: [.blue, .green]), startPoint: .topLeading, endPoint: .bottomTrailing)
+                    K.Color.LinearGrad.blueGreen
                         .mask(SymbolView(symbol: K.Symbol.tortoise))
-                    .opacity(flipped ? 1.0 : 0.0)
+                        .opacity(flipped ? 1.0 : 0.0)
                 }
             }
             .frame(width: 350, height: 250)
-            .background((colorScheme != .dark) ? LinearGradient(gradient: Gradient(colors: [.blue, .green]), startPoint: .topLeading, endPoint: .bottomTrailing) : LinearGradient(gradient: Gradient(colors: [.gray, .white, .black]), startPoint: .topLeading, endPoint: .bottomTrailing))
+            .background((colorScheme != .dark) ? K.Color.LinearGrad.blueGreen : K.Color.LinearGrad.metallicPlatinum)
             .cornerRadius(30)
             .modifier(FlipEffect(flipped: $flipped, axis: (x: 0, y: 1), angle: animate3d ? 180 : 0))
             .onTapGesture {
