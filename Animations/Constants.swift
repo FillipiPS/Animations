@@ -26,10 +26,10 @@ struct K {
         static let item = "ItemColor"
         static let background = "BackgroundColor"
         struct Gold {
-            static let first = UIColor(red: 0.98, green: 0.95, blue: 0.58, alpha: 1.00)
-            static let second = UIColor(red: 0.88, green: 0.67, blue: 0.24, alpha: 1.00)
-            static let third = UIColor(red: 0.97, green: 0.94, blue: 0.54, alpha: 1.00)
-            static let fourth = UIColor(red: 0.72, green: 0.54, blue: 0.27, alpha: 1.00)
+            static let first = Color(UIColor(red: 0.98, green: 0.95, blue: 0.58, alpha: 1.00))
+            static let second = Color(UIColor(red: 0.88, green: 0.67, blue: 0.24, alpha: 1.00))
+            static let third = Color(UIColor(red: 0.97, green: 0.94, blue: 0.54, alpha: 1.00))
+            static let fourth = Color(UIColor(red: 0.72, green: 0.54, blue: 0.27, alpha: 1.00))
         }
         struct LinearGrad {
             static let blueGreen = LinearGradient(gradient: Gradient(colors: [.blue, .green]), startPoint: .topLeading, endPoint: .bottomTrailing)
