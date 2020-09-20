@@ -22,7 +22,7 @@ struct K {
         static let tortoise = "tortoise"
     }
     
-    struct Color {
+    struct ColorPalette {
         static let item = "ItemColor"
         static let background = "BackgroundColor"
         struct Gold {

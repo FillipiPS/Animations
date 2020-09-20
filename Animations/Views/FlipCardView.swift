@@ -28,17 +28,17 @@ struct FlipCardView: View {
                         .foregroundColor(.white)
                         .opacity(flipped ? 1.0 : 0.0)
                 } else {
-                    K.Color.LinearGrad.blueGreen
+                    K.ColorPalette.LinearGrad.blueGreen
                         .mask(SymbolView(symbol: K.Symbol.ant))
                         .opacity(flipped ? 0.0 : 1.0)
                     
-                    K.Color.LinearGrad.blueGreen
+                    K.ColorPalette.LinearGrad.blueGreen
                         .mask(SymbolView(symbol: K.Symbol.tortoise))
                         .opacity(flipped ? 1.0 : 0.0)
                 }
             }
             .frame(width: 350, height: 250)
-            .background((colorScheme != .dark) ? K.Color.LinearGrad.blueGreen : K.Color.LinearGrad.metallicPlatinum)
+            .background((colorScheme != .dark) ? K.ColorPalette.LinearGrad.blueGreen : K.ColorPalette.LinearGrad.metallicPlatinum)
             .cornerRadius(30)
             .modifier(FlipEffect(flipped: $flipped, axis: (x: 0, y: 1), angle: animate3d ? 180 : 0))
             .onTapGesture {
@@ -47,7 +47,7 @@ struct FlipCardView: View {
                 }
             }
             Spacer()
-        }.background(Color(K.Color.background))
+        }.background(Color(K.ColorPalette.background))
     }
 }
 

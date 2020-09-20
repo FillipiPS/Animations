@@ -28,7 +28,7 @@ struct ContentView: View {
                     Text("Flip Card")
             }
         }
-        .background(Color(K.Color.background))
+        .background(Color(K.ColorPalette.background))
     }
 }
 
