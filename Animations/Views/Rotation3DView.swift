@@ -22,7 +22,7 @@ struct Rotation3DView: View {
             Circle()
                 .foregroundColor(Color(K.ColorPalette.item))
                 .overlay(
-                    LinearGradient(gradient: Gradient(colors: [.blue, .green]), startPoint: .topLeading, endPoint: .bottomTrailing)
+                    K.ColorPalette.LinearGrad.blueGreen
                         .mask(SymbolView(symbol: K.Symbol.ant))
                 )
                 .frame(width: 100.0, height: 100.0)
@@ -35,7 +35,7 @@ struct Rotation3DView: View {
                         }
                     }
                 }
-            .rotation3DEffect(.degrees(animationAmount), axis: (x: axis.0, y: axis.1, z: axis.2))
+                .rotation3DEffect(.degrees(animationAmount), axis: (x: axis.0, y: axis.1, z: axis.2))
             Spacer()
         }
         .onAppear() {
