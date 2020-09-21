@@ -34,6 +34,7 @@ struct K {
         struct LinearGrad {
             static let blueGreen = LinearGradient(gradient: Gradient(colors: [.blue, .green]), startPoint: .topLeading, endPoint: .bottomTrailing)
             static let metallicPlatinum = LinearGradient(gradient: Gradient(colors: [.gray, .white, .black]), startPoint: .topLeading, endPoint: .bottomTrailing)
+            static let metallicGold = LinearGradient(gradient: Gradient(colors: [Gold.first, Gold.second, Gold.third, Gold.fourth]), startPoint: .topLeading, endPoint: .bottomTrailing)
         }
     }
     
